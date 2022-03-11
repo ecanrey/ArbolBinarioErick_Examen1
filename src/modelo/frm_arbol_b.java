@@ -147,7 +147,7 @@ String strRecorrido = "";
             
             Random random = new Random();
 
-            for(int i = 1; i <=5; i++) {
+            for(int i = 1; i <=1000000; i++) {
                 int value = random.nextInt((1000000 - 1) + 1) + 1;
                 System.out.println(value);
                 }
