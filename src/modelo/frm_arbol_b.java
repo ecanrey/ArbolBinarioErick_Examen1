@@ -5,6 +5,7 @@
  */
 package modelo;
 
+import java.util.Random;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreePath;
@@ -37,7 +38,6 @@ String strRecorrido = "";
         jScrollPane1 = new javax.swing.JScrollPane();
         j_arbol = new javax.swing.JTree();
         btn_agregar = new javax.swing.JButton();
-        txt_agregar = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtConsola = new javax.swing.JTextArea();
         btnLimpiarArbol = new javax.swing.JButton();
@@ -109,22 +109,18 @@ String strRecorrido = "";
                         .addGap(46, 46, 46)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnPostorden, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(btnOrden, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(txt_agregar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(btn_agregar))
-                                .addComponent(btnPreorden, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)))
+                            .addComponent(btnOrden, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(114, 114, 114)
+                                .addComponent(btn_agregar))
+                            .addComponent(btnPreorden, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_agregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_agregar))
+                .addComponent(btn_agregar)
                 .addGap(18, 18, 18)
                 .addComponent(btnLimpiarArbol)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -149,12 +145,12 @@ String strRecorrido = "";
         // TODO add your handling code here:
          try{
             
-            if (txt_agregar.getText().length() <= 0) 
-                    throw new Exception("¡Ingrese un valor por favor!");
-                
-            int valorNuevo = 0;
-            try{ valorNuevo = Integer.parseInt(txt_agregar.getText());}
-            catch(Exception ex){throw new Exception("¡Ingrese un entero!");}
+            Random random = new Random();
+
+            for(int i = 1; i <=5; i++) {
+                int value = random.nextInt((1000000 - 1) + 1) + 1;
+                System.out.println(value);
+                }
 
             DefaultMutableTreeNode nodoRaiz = (DefaultMutableTreeNode) j_arbol.getModel().getRoot();
             if(nodoRaiz != null)
@@ -363,6 +359,5 @@ public void RecorridoPostorden(DefaultMutableTreeNode nodoRaiz)
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTree j_arbol;
     private javax.swing.JTextArea txtConsola;
-    private javax.swing.JTextField txt_agregar;
     // End of variables declaration//GEN-END:variables
 }

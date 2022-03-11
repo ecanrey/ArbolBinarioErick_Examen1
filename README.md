@@ -1,2 +1,4 @@
-# ArbolBinarioErick_Examen1
-Arbol binario con inserción de 1000000 número aleatorios
+# RecorridoArbolErick
+Recorrido de Arbol en (Preorden, Inorden y Postorden)
+Erick Estuardo Canrey Cojolón
+0910-13-2153

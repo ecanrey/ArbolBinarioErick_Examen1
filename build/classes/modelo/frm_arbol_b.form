@@ -46,8 +46,7 @@
                           <Component id="btnPostorden" pref="247" max="32767" attributes="0"/>
                           <Component id="btnOrden" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="txt_agregar" min="-2" pref="108" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
                               <Component id="btn_agregar" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="btnPreorden" alignment="0" pref="247" max="32767" attributes="0"/>
@@ -62,10 +61,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txt_agregar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btn_agregar" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
+              <Component id="btn_agregar" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnLimpiarArbol" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -105,8 +101,6 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_agregarActionPerformed"/>
       </Events>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txt_agregar">
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane2">
       <AuxValues>
